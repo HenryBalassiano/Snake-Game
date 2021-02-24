@@ -141,15 +141,13 @@ function onkeydown(e) {
 
     GAME_STATE.leftKey = false;
     GAME_STATE.rightKey = false;
-  } else if (e.keyCode === KEYCODE_LEFT) {
+  } else if (e.keyCode === KEYCODE_LEFT && GAME_STATE.rightKey !== true) {
     GAME_STATE.leftKey = true;
     GAME_STATE.upKey = false;
-    GAME_STATE.rightKey = false;
     GAME_STATE.downKey = false;
   } else if (e.keyCode === KEYCODE_RIGHT) {
     GAME_STATE.rightKey = true;
     GAME_STATE.upKey = false;
-    GAME_STATE.leftKey = false;
     GAME_STATE.downKey = false;
   }
 }
