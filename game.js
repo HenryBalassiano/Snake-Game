@@ -133,12 +133,12 @@ function update(currentDelta) {
 function onkeydown(e) {
   if (e.keyCode === KEYCODE_DOWN) {
     GAME_STATE.downKey = true;
-    GAME_STATE.upKey = false;
     GAME_STATE.leftKey = false;
     GAME_STATE.rightKey = false;
-  } else if (e.keyCode === KEYCODE_UP) {
+  } else if (e.keyCode === KEYCODE_UP && GAME_STATE.downKey !== true) {
     GAME_STATE.upKey = true;
     GAME_STATE.downKey = false;
+
     GAME_STATE.leftKey = false;
     GAME_STATE.rightKey = false;
   } else if (e.keyCode === KEYCODE_LEFT) {
