@@ -1,0 +1,50 @@
+#game-board {
+  height: 500px;
+  width: 500px;
+  border: 1px white solid;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+}
+.sqaure {
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  z-index: 4;
+}
+h4 {
+  color: white;
+  font-size: 15px;
+  font-family: "Press Start 2P";
+  font-weight: lighter;
+}
+.player {
+  background-color: green;
+  width: 15px;
+  height: 15px;
+}
+
+.apple {
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  z-index: 6;
+}
+#manual {
+  color: white;
+  font-size: 11px;
+  font-family: "Press Start 2P";
+  font-weight: lighter;
+  text-align: right;
+  position: relative;
+  bottom: 2rem;
+}
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
