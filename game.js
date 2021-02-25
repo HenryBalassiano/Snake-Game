@@ -91,6 +91,7 @@ function isDead() {
     location.reload();
   }
 }
+
 function appleEaten() {
   if (
     GAME_STATE.snakePosition[0].x == GAME_STATE.appleXPosition &&
@@ -102,6 +103,14 @@ function appleEaten() {
     GAME_STATE.appleYPosition = random;
     document.getElementById("score").innerText = SCORE += 1;
     console.log("Length", SNAKE_LENGTH);
+  }
+  for (var i = 1; i < GAME_STATE.snakePosition.length; i++) {
+    if (
+      GAME_STATE.snakePosition[0].x === GAME_STATE.snakePosition[i].x &&
+      GAME_STATE.snakePosition[0].y === GAME_STATE.snakePosition[i].y
+    ) {
+      location.reload();
+    }
   }
 }
 function setPosition(snake, x, y) {
