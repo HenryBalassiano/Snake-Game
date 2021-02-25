@@ -1,12 +1,13 @@
 <DOCTYPE <!DOCTYPE html>
   <html>
     <head>
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
         rel="stylesheet"
       />
+    </head>
 
+    <body>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title></title>
@@ -16,8 +17,16 @@
       <div id="game-board"></div>
       <h4>Score: <span id="score">0</span></h4>
       <h4 id="manual">Controls: Arrow Keys</h4>
+      <script>
+        var link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+          link = document.createElement("link");
+          link.rel = "icon";
+          document.getElementsByTagName("head")[0].appendChild(link);
+        }
+        link.href =
+          "https://cdn.pixabay.com/photo/2018/11/08/08/35/snake-3802047_960_720.png";
+      </script>
       <script src="game.js"></script>
-    </head>
-
-    <body></body></html
+    </body></html
 ></DOCTYPE>
